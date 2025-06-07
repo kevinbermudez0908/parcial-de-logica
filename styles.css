@@ -1,0 +1,153 @@
+/* Reset básico y fuentes */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f2f4f8;
+  color: #212529;
+  line-height: 1.6;
+  padding: 40px 20px;
+}
+
+/* Contenedor principal */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Encabezado */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+nav {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+nav button {
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+nav button:hover {
+  background-color: #0b5ed7;
+}
+
+/* Secciones */
+section {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  margin-bottom: 40px;
+  display: none;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+section h2 {
+  font-size: 1.8rem;
+  color: #343a40;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #dee2e6;
+  padding-bottom: 10px;
+}
+
+/* Mostrar sección activa */
+section:not(.hidden) {
+  display: block;
+}
+
+/* Formularios */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input,
+form select {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  transition: border-color 0.3s;
+}
+
+form input:focus,
+form select:focus {
+  border-color: #0d6efd;
+  outline: none;
+}
+
+form button,
+section button {
+  align-self: flex-start;
+  background-color: #198754;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover,
+section button:hover {
+  background-color: #157347;
+}
+
+/* Tabla de resultados */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 0.95rem;
+}
+
+th, td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+th {
+  background-color: #f8f9fa;
+  color: #495057;
+}
+
+tr:hover {
+  background-color: #f1f3f5;
+}
+
+/* Mensajes */
+#resultado-busqueda,
+#lista-personas {
+  margin-top: 20px;
+}
+
+/* Animación */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
